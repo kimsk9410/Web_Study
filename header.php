@@ -7,13 +7,6 @@
         <link rel="stylesheet" href="/css/bootstrap.css">
         <link rel="stylesheet" href="/css/style.css">
 
-        <?php
-            $connect = mysql_connect('localhost', 'skwinter', 'skwinter0513') or die("Do not connect!");
-            $dbname = mysql_query("create database sample", $connect);
-
-            mysql_close($connect);
-        ?>
-
         <div class="header">
             <div class="logo">
                 <img src="/img/logo_back.png" width="100%">
@@ -25,6 +18,9 @@
                     </li>
                     <li>
                         <a href="/memo.php">Memo</a>
+                    </li>
+                    <li>
+                        <a href="/view.php">View</a>
                     </li>
                 </ul>
             </div>
