@@ -22,6 +22,9 @@
                     <li>
                         <a href="/view.php">View</a>
                     </li>
+                    <li>
+                        <a href="/location.php">Location</a>
+                    </li>
                 </ul>
             </div>
         </div>

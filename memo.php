@@ -4,8 +4,8 @@ include "header.php";
 
 <div>
     <center>
-        <form name='TRM' method='post' action='memo_insert.php'
-    </center> <!--입력한 값은 memo_insert.php로 넘어갑니다.-->
+        <form name='TRM' method='post' action='memo_insert.php'>
+
     <table width='600' border=1>
         <tr>
             <td width='20%'>
@@ -20,7 +20,9 @@ include "header.php";
             <td width='100%'><input type='text' name='Memo' size="70"></td>
         </tr>
     </table>
-    <input type='submit' value='저장'>
+    <input type='submit' value='저장' onclick="getLocation()">
+        </form>
+    </center> <!--입력한 값은 memo_insert.php로 넘어갑니다.-->
 </div>
 
 <?php
