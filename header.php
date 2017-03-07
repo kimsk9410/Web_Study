@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+if(!$conn){
+    $conn = mysql_connect("localhost", "skwinter", "skwinter0513") or die("실패입니다.");
+    mysql_select_db("skwinter");
+    mysql_query("set names utf8;");
+
+    mysql_query("set session character_set_connection=utf8;");
+    mysql_query("set session character_set_results=utf8;");
+    mysql_query("set session character_set_client=utf8;");
+
+}
+?>
 <html>
     <head>
         <title>SeonKyu's winter project</title>
@@ -21,9 +33,6 @@
                     </li>
                     <li>
                         <a href="/view.php">View</a>
-                    </li>
-                    <li>
-                        <a href="/location.php">Location</a>
                     </li>
                 </ul>
             </div>

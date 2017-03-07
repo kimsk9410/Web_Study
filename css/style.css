@@ -41,3 +41,9 @@ html, body {
     width:10%;
     height: 30px;
 }
+
+
+/* body */
+.container{
+    padding-top: 50px;
+}
