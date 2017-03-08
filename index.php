@@ -6,10 +6,10 @@ include "header.php";
 
 <div id="style-selector-control"  class="map-control">
     <select id="style-selector" class="selector-control">
-        <option value="default">Default</option>
+        <option value="default" selected="selected">Default</option>
         <option value="silver">Silver</option>
         <option value="night">Night mode</option>
-        <option value="retro" selected="selected">Retro</option>
+        <option value="retro">Retro</option>
         <option value="hiding">Hide features</option>
     </select>
 </div>
@@ -39,6 +39,13 @@ include "header.php";
             map.setOptions({styles: styles[styleSelector.value]});
         });
 
+        var marker_image = {
+            url: '/img/marker.png'
+            /*size: new google.maps.Size(1%, 1%)*/
+            /*origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 32)*/
+        }
+
         <?php
         /*$conn = mysql_connect("localhost", "skwinter", "skwinter0513") or die("실패입니다.");
         mysql_select_db("skwinter");*/
@@ -67,7 +74,8 @@ include "header.php";
         var marker<?php echo $result[0]?> = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: '<?php echo $title?>'
+            title: '<?php echo $title?>',
+            icon: marker_image
         });
         marker<?php echo $result[0]?>.addListener('click', function() {
             infowindow<?php echo $result[0]?>.open(map, marker<?php echo $result[0]?>);
